@@ -36,10 +36,10 @@ class TMCapacityManagementPlugin
     {
         woocommerce_wp_text_input([
             'id'  => '_event_capacity',
-            'label'  => __('Event capacity', 'dl-ticket-manager'),
-            'placeholder' => __('Capacity', 'dl-ticket-manager'),
+            'label'  => __('Event capacity', 'dl-ticket-manager-capacity'),
+            'placeholder' => __('Capacity', 'dl-ticket-manager-capacity'),
             'desc_tip' => true,
-            'description' => __('Maximum number of attendees. Can be zero.', 'dl-ticket-manager'),
+            'description' => __('Maximum number of attendees. Can be zero.', 'dl-ticket-manager-capacity'),
             'type'  => 'number',
             'custom_attributes' => [
                 'min' => '0',
