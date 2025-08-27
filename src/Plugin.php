@@ -8,8 +8,71 @@ class TMCapacityManagementPlugin
         add_filter('manage_edit-product_columns', [$this, 'addTicketColumn']);
         add_action('manage_product_posts_custom_column', [$this, 'renderTicketColumn'], 10, 2);
         add_action('admin_head', [$this, 'customColumnStyle']);
+        add_action('dl_ticket_event_fields_after', [$this, 'eventFieldsAfter']);
+        add_action('dl_ticket_save_event_fields', [$this, 'saveEventFields']);
+
+        add_filter('dl_ticket_purchasable', [$this, 'filterTicketPurchasable'], 10, 2);
     }
 
+    /**
+     * Guarda el aforo del evento cuando es enviado
+     * @param mixed $post_id
+     * @return void
+     * @author Daniel Lucia
+     */
+    public function saveEventFields($post_id)
+    {
+        $capacity = isset($_POST['_event_capacity']) ? intval($_POST['_event_capacity']) : 0;
+        update_post_meta($post_id, '_event_capacity', $capacity);
+    }
+
+
+    /**
+     * Muestra el campo de aforo
+     * @return void
+     * @author Daniel Lucia
+     */
+    public function eventFieldsAfter()
+    {
+        woocommerce_wp_text_input([
+            'id'  => '_event_capacity',
+            'label'  => __('Event capacity', 'dl-ticket-manager'),
+            'placeholder' => __('Capacity', 'dl-ticket-manager'),
+            'desc_tip' => true,
+            'description' => __('Maximum number of attendees. Can be zero.', 'dl-ticket-manager'),
+            'type'  => 'number',
+            'custom_attributes' => [
+                'min' => '0',
+                'step' => '1'
+            ],
+        ]);
+    }
+
+    /**
+     * Evita la compra de tickets si el aforo es 0
+     * @param bool $purchasable
+     * @param WC_Product $product
+     * @return bool
+     * @author Daniel Lucia
+     */
+    public function filterTicketPurchasable(bool $purchasable, WC_Product $product): bool
+    {
+        if ($product->is_type('ticket')) {
+
+            $capacity = get_post_meta($product->get_id(), '_event_capacity', true);
+            if ((int)$capacity === 0) {
+                return false;
+            }
+        }
+
+        return $purchasable;
+    }
+
+    /**
+     * Estilo a la columna de aforo
+     * @return void
+     * @author Daniel Lucia
+     */
     public function customColumnStyle()
     {
         $screen = get_current_screen();
@@ -20,6 +83,12 @@ class TMCapacityManagementPlugin
         }
     }
 
+    /**
+     * Añade la columna de aforo a la tabla de productos
+     * @param array $columns
+     * @return array
+     * @author Daniel Lucia
+     */
     public function addTicketColumn(array $columns): array
     {
         $new_columns = [];
@@ -32,6 +101,13 @@ class TMCapacityManagementPlugin
         return $new_columns;
     }
 
+    /**
+     * Renderiza el contenido de la columna de aforo
+     * @param string $column
+     * @param int $post_id
+     * @return void
+     * @author Daniel Lucia
+     */
     public function renderTicketColumn(string $column, int $post_id): void
     {
         if ($column !== 'event_capacity') {
