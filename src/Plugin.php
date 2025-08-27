@@ -59,9 +59,12 @@ class TMCapacityManagementPlugin
     {
         if ($product->is_type('ticket')) {
 
-            $capacity = get_post_meta($product->get_id(), '_event_capacity', true);
-            if ((int)$capacity === 0) {
-                return false;
+            //Verificamos aforo
+            $capacity = $product->get_meta('_event_capacity');
+            $sales = $product->get_total_sales();
+
+            if ($capacity && $sales >= $capacity) {
+                $purchasable = false;
             }
         }
 
