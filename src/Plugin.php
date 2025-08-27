@@ -34,18 +34,21 @@ class TMCapacityManagementPlugin
      */
     public function eventFieldsAfter()
     {
-        woocommerce_wp_text_input([
-            'id'  => '_event_capacity',
-            'label'  => __('Event capacity', 'dl-ticket-manager-capacity'),
-            'placeholder' => __('Capacity', 'dl-ticket-manager-capacity'),
-            'desc_tip' => true,
-            'description' => __('Capacity limit. Leave zero for indeterminate.', 'dl-ticket-manager-capacity'),
-            'type'  => 'number',
-            'custom_attributes' => [
-                'min' => '0',
-                'step' => '1'
-            ],
-        ]);
+
+        echo '<div class="options_group">';
+            woocommerce_wp_text_input([
+                'id'  => '_event_capacity',
+                'label'  => __('Event capacity', 'dl-ticket-manager-capacity'),
+                'placeholder' => __('Capacity', 'dl-ticket-manager-capacity'),
+                'desc_tip' => true,
+                'description' => __('Capacity limit. Leave zero for indeterminate.', 'dl-ticket-manager-capacity'),
+                'type'  => 'number',
+                'custom_attributes' => [
+                    'min' => '0',
+                    'step' => '1'
+                ],
+            ]);
+        echo '</div>';
     }
 
     /**
