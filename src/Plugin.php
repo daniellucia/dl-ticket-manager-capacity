@@ -39,7 +39,7 @@ class TMCapacityManagementPlugin
             'label'  => __('Event capacity', 'dl-ticket-manager-capacity'),
             'placeholder' => __('Capacity', 'dl-ticket-manager-capacity'),
             'desc_tip' => true,
-            'description' => __('Maximum number of attendees. Can be zero.', 'dl-ticket-manager-capacity'),
+            'description' => __('Capacity limit. Leave zero for indeterminate.', 'dl-ticket-manager-capacity'),
             'type'  => 'number',
             'custom_attributes' => [
                 'min' => '0',
