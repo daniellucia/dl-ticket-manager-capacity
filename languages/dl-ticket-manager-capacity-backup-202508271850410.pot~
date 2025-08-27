@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Capacity management for Ticket Manager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 18:53+0000\n"
+"POT-Creation-Date: 2025-08-27 16:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,12 +16,8 @@ msgstr ""
 "X-Loco-Version: 2.8.0; wp-6.8.2; php-8.1.29\n"
 "X-Domain: dl-ticket-manager-capacity"
 
-#: src/Plugin.php:40
-msgid "Capacity"
-msgstr ""
-
-#: src/Plugin.php:42
-msgid "Capacity limit. Leave zero for indeterminate."
+#: src/Plugin.php:50
+msgid "Allocated capacity: <strong>%d</strong>"
 msgstr ""
 
 #. Name of the plugin
@@ -32,10 +28,6 @@ msgstr ""
 msgid "Daniel Lúcia"
 msgstr ""
 
-#: src/Plugin.php:39
-msgid "Event capacity"
-msgstr ""
-
 #. Description of the plugin
 msgid "Gestión de aforo sencillo para el gestor de tickets."
 msgstr ""
@@ -44,6 +36,10 @@ msgstr ""
 msgid "http://www.daniellucia.es"
 msgstr ""
 
-#: src/Plugin.php:125
+#: src/Plugin.php:46
 msgid "No allocated capacity"
+msgstr ""
+
+#: src/Plugin.php:51
+msgid "Total sales: <strong>%d</strong>"
 msgstr ""

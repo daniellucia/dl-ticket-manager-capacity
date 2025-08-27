@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Capacity management for Ticket Manager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 18:53+0000\n"
+"POT-Creation-Date: 2025-08-27 18:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,24 +16,12 @@ msgstr ""
 "X-Loco-Version: 2.8.0; wp-6.8.2; php-8.1.29\n"
 "X-Domain: dl-ticket-manager-capacity"
 
-#: src/Plugin.php:40
-msgid "Capacity"
-msgstr ""
-
-#: src/Plugin.php:42
-msgid "Capacity limit. Leave zero for indeterminate."
-msgstr ""
-
 #. Name of the plugin
 msgid "Capacity management for Ticket Manager"
 msgstr ""
 
 #. Author of the plugin
 msgid "Daniel Lúcia"
-msgstr ""
-
-#: src/Plugin.php:39
-msgid "Event capacity"
 msgstr ""
 
 #. Description of the plugin

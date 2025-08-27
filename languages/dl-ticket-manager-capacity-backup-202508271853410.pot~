@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Capacity management for Ticket Manager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 18:53+0000\n"
+"POT-Creation-Date: 2025-08-27 18:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -18,10 +18,6 @@ msgstr ""
 
 #: src/Plugin.php:40
 msgid "Capacity"
-msgstr ""
-
-#: src/Plugin.php:42
-msgid "Capacity limit. Leave zero for indeterminate."
 msgstr ""
 
 #. Name of the plugin
@@ -42,6 +38,10 @@ msgstr ""
 
 #. Author URI of the plugin
 msgid "http://www.daniellucia.es"
+msgstr ""
+
+#: src/Plugin.php:42
+msgid "Maximum number of attendees. Can be zero."
 msgstr ""
 
 #: src/Plugin.php:125
