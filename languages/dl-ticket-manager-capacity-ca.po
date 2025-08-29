@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Capacity management for Ticket Manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-27 18:53+0000\n"
+"PO-Revision-Date: 2025-08-29 15:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Catalan\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-8.1.29\n"
+"X-Domain: dl-ticket-manager-capacity"
+
+#: src/Plugin.php:40
+msgid "Capacity"
+msgstr "Capacitat"
+
+#: src/Plugin.php:42
+msgid "Capacity limit. Leave zero for indeterminate."
+msgstr "Límit de capacitat. Deixeu zero per a indeterminat."
+
+#. Name of the plugin
+msgid "Capacity management for Ticket Manager"
+msgstr "Gestió de capacitat per a Ticket Manager"
+
+#. Author of the plugin
+msgid "Daniel Lúcia"
+msgstr "Daniel Lúcia"
+
+#: src/Plugin.php:39
+msgid "Event capacity"
+msgstr "Capacitat de l'esdeveniment"
+
+#. Description of the plugin
+msgid "Gestión de aforo sencillo para el gestor de tickets."
+msgstr "Gestió de l'aforament senzill per al gestor de bitllets."
+
+#. Author URI of the plugin
+msgid "http://www.daniellucia.es"
+msgstr "http://www.daniellucia.es"
+
+#: src/Plugin.php:125
+msgid "No allocated capacity"
+msgstr "Sense capacitat assignada"
