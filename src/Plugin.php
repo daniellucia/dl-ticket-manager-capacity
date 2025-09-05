@@ -1,8 +1,10 @@
 <?php
 
+namespace DL\TicketManagerCapacity;
+
 defined('ABSPATH') || exit;
 
-class TMCapacityManagementPlugin
+class Plugin
 {
 
     public function init(): void
@@ -60,7 +62,7 @@ class TMCapacityManagementPlugin
      * @return bool
      * @author Daniel Lucia
      */
-    public function filterTicketPurchasable(bool $purchasable, WC_Product $product): bool
+    public function filterTicketPurchasable(bool $purchasable, \WC_Product $product): bool
     {
         if ($product->is_type('ticket')) {
 

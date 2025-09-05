@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Capacity management for Ticket Manager
- * Description: Gestión de aforo sencillo para el gestor de tickets.
+ * Description: Simple capacity management for the ticket manager.
  * Version: 0.0.2
  * Author: Daniel Lúcia
  * Author URI: http://www.daniellucia.es
@@ -10,14 +10,15 @@
  * Requires Plugins: dl-ticket-manager
  */
 
+use DL\TicketManagerCapacity\Plugin;
+
 defined('ABSPATH') || exit;
 
-require_once __DIR__ . '/src/Plugin.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 add_action('plugins_loaded', function () {
 
     load_plugin_textdomain('dl-ticket-manager-capacity', false, dirname(plugin_basename(__FILE__)) . '/languages');
 
-    $plugin = new TMCapacityManagementPlugin();
-    $plugin->init();
+    (new Plugin())->init();
 });
